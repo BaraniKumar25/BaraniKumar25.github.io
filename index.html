@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Barani Kumar | Portfolio</title>
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500&family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Poppins', sans-serif;
+      background-color: #0d0d0d;
+      color: #00BFFF;
+      scroll-behavior: smooth;
+    }
+
+    .hero {
+      height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      background: linear-gradient(rgba(13, 13, 13, 0.8), rgba(13, 13, 13, 0.8)), url('images/bg-hero.png') no-repeat center center/cover;
+      background-attachment: fixed;
+      position: relative;
+    }
+
+    .hero h1 {
+      font-size: 3rem;
+      color: #00BFFF;
+      text-shadow: 0 0 10px #00BFFF;
+      z-index: 1;
+      white-space: nowrap; 
+    }
+
+    .hero .highlight {
+      color: #FFA500;
+      text-shadow: 0 0 15px #FFA500;
+    }
+
+    .hero h2 {
+      font-size: 1.5rem;
+      color: #8A2BE2;
+      text-shadow: 0 0 10px #8A2BE2;
+      z-index: 1;
+    }
+
+    .glow-btn {
+      margin-top: 2rem;
+      padding: 12px 25px;
+      border: 2px solid #00BFFF;
+      color: #00BFFF;
+      background: transparent;
+      border-radius: 8px;
+      text-decoration: none;
+      box-shadow: 0 0 10px #00BFFF;
+      transition: all 0.3s ease;
+      z-index: 1;
+    }
+
+    .glow-btn:hover {
+      background: #00BFFF;
+      color: #0d0d0d;
+      box-shadow: 0 0 20px #00BFFF;
+    }
+
+    section {
+      max-width: 900px;
+      margin: auto;
+      padding: 3rem 1.5rem;
+    }
+
+    h2 {
+      color: #8A2BE2;
+      border-left: 5px solid #FFA500;
+      padding-left: 10px;
+      text-shadow: 0 0 10px #8A2BE2;
+    }
+
+    p {
+      font-size: 1.1rem; /* Base font size for paragraphs */
+    }
+
+    #about p {
+      font-family: 'Poppins', sans-serif;
+      font-size: 1.1rem; /* Keep this consistent or adjust if needed */
+      line-height: 1.6; /* Improve readability with more line spacing */
+    }
+
+    .skills-box {
+      background-color: #1a1a1a;
+      border-left: 5px solid #FFA500;
+      padding: 1.5rem;
+      border-radius: 10px;
+      box-shadow: 0 0 12px #8A2BE255;
+      margin-top: 1.5rem;
+    }
+
+    .skills-box ul {
+      list-style-type: disc;
+      padding-left: 1.5rem;
+      text-align: left;
+    }
+
+    .skills-box li {
+      margin: 0.5rem 0;
+      font-size: 1.1rem;
+      color: #FFA500;
+      transition: all 0.3s ease;
+    }
+
+    .skills-box li:hover {
+      color: #ffffff;
+      text-shadow: 0 0 8px #FFA500;
+      cursor: default;
+    }
+
+    .project {
+      background: #1a1a1a;
+      padding: 1rem;
+      margin: 1rem 0;
+      border-radius: 8px;
+      box-shadow: 0 0 10px #00BFFF55;
+    }
+
+    a {
+      color: #00BFFF;
+      text-decoration: none;
+    }
+
+    a:hover {
+      color: #8A2BE2;
+      text-shadow: 0 0 8px #8A2BE2;
+    }
+
+    .contact-icons a {
+      margin: 0 10px;
+      display: inline-block;
+    }
+
+    .contact-icons img {
+      width: 40px;
+      height: 40px;
+      transition: transform 0.3s ease;
+    }
+
+    .contact-icons img:hover {
+      transform: scale(1.2);
+    }
+
+    footer {
+      background: #1a1a1a;
+      text-align: center;
+      padding: 1rem;
+      color: #8A2BE2;
+      font-family: 'Orbitron', sans-serif;
+      box-shadow: 0 -2px 10px #8A2BE255;
+    }
+
+    /* Media Query for Mobile View */
+    @media (max-width: 768px) {
+      .hero h1 {
+        font-size: 2rem; /* Adjust font size for smaller screens */
+      }
+      #about p {
+        font-size: 1rem; /* Slightly reduce paragraph font size for better fit */
+        line-height: 1.5; /* Adjust line height for smaller screens */
+      }
+    }
+
+    @media (max-width: 480px) {
+      .hero h1 {
+        font-size: 1.5rem; /* Further reduce font size for very small screens */
+      }
+      #about p {
+        font-size: 0.9rem; /* Further reduce paragraph font size for very small screens */
+        padding: 0 1rem; /* Add some horizontal padding to prevent text from touching edges */
+      }
+      section {
+        padding: 2rem 1rem; /* Reduce section padding on very small screens */
+      }
+    }
+  </style>
+</head>
+<body>
+  <section class="hero">
+    <h1>Hello, I'm <span class="highlight">Barani Kumar</span></h1>
+    <h2><span id="typed"></span></h2>
+    <a href="#projects" class="glow-btn">See My Work</a>
+  </section>
+
+  <section id="about">
+    <h2>About Me</h2>
+    <p>Hi, I’m Barani Kumar — a 3rd-year B.Tech student in Computer Science and Business Systems at<br> Dr. NGP Institute of Technology. I’m a passionate developer who enjoys exploring web technologies, learning new tools, and turning ideas into real, usable projects.</p>
+    <p>I’m always curious and love experimenting with creative solutions, whether it’s building web apps, designing user-friendly interfaces, or just diving into a new framework. I'm still learning every day — and that’s the best part of the journey.</p>
+  </section>
+
+  <section id="skills">
+    <h2>Skills</h2>
+    <div class="skills-box">
+      <ul>
+        <li>Python</li>
+        <li>Java</li>
+        <li>HTML</li>
+        <li>CSS</li>
+        <li>JavaScript</li>
+        <li>Django</li>
+        <li>Node js</li>
+        <li>React js</li>
+      </ul>
+    </div>
+  </section>
+
+  <section id="projects">
+    <h2>Projects</h2>
+    <div class="project">
+      <p>Coming soon...🔥 </p>
+    </div>
+  </section>
+
+  <section id="contact">
+    <h2>Contact Me</h2>
+    <div class="contact-icons">
+      <a href="mailto:lachuspeedy@gmail.com" target="_blank">
+        <img src="https://img.icons8.com/fluency/48/000000/apple-mail.png" alt="Email"/>
+      </a>
+      <a href="https://github.com/BaraniKumar25" target="_blank">
+        <img src="https://img.icons8.com/ios-filled/50/00BFFF/github.png" alt="GitHub"/>
+      </a>
+      <a href="www.linkedin.com/in/barani-kumar-s-n-0b70ba289" target="_blank">
+        <img src="https://img.icons8.com/fluency/48/000000/linkedin.png" alt="LinkedIn"/>
+      </a>
+    </div>
+  </section>
+
+  <footer>
+    <p>| 2025 Barani Kumar ! |</p>
+  </footer>
+
+  <script>
+    var typed = new Typed("#typed", {
+      strings: ["Web Developer", "Software Engineer", "Tech Explorer"],
+      typeSpeed: 60,
+      backSpeed: 40,
+      loop: true
+    });
+  </script>
+</body>
+</html>
